@@ -1,4 +1,4 @@
-class ActsAsCommentableWithThreadingMigrationGenerator < Rails::Generators::Base
+class ActsAsRedditableGenerator < Rails::Generators::Base
   include Rails::Generators::Migration
   
   source_root File.expand_path('../templates', __FILE__)
