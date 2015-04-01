@@ -1,0 +1,6 @@
+sqlite3:
+  adapter: sqlite3
+  database: acts_as_redditable.sqlite3.db
+sqlite3mem:
+  :adapter: sqlite3
+  :database: ":memory:"

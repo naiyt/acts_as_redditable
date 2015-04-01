@@ -4,11 +4,13 @@ Gem::Specification.new do |gem|
   gem.date           =  '2015-03-31'
   gem.summary        =  'Rails to Reddit relations'
   gem.description    =  'Tie a Rails model to a Reddit post'
-  gem.files          =  ["lib/acts_as_redditable.rb"]
   gem.authors        =  ["Nate Collings"]
   gem.email          =  'nate@natecollings.com'
   gem.homepage       =  'https://github.com/naiyt/acts_as_redditable'
   gem.license        =  'MIT'
+
+  gem.files    = `git ls-files`.split("\n")
+  gem.test_files = `git ls-files -- spec/*`.split("\n")
 
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec', '>= 3.0'
