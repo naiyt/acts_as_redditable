@@ -1,6 +1,6 @@
 ActiveRecord::Schema.define(:version => 1) do
   create_table "builds", :force => true do |t|
-    t.timestamps
+    t.timestamps null: false
   end
 
   create_table "reddit_posts", :force => true do |t|
@@ -9,7 +9,11 @@ ActiveRecord::Schema.define(:version => 1) do
     t.string :url
     t.string :reddit_owner
     t.integer :user_id, :null => false
-    t.timestamps
+    t.timestamps null: false
+  end
+
+  create_table "builds", :force => true do |t|
+    t.timestamps null: false
   end
 
   add_index :reddit_posts, :user_id

@@ -1,0 +1,77 @@
+# Logfile created on 2015-04-01 19:21:56 -0600 by logger.rb/44203
+D, [2015-04-01T19:22:43.734284 #22564] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mCREATE TABLE "builds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+D, [2015-04-01T19:22:43.734993 #22564] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE TABLE "reddit_posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "redditable_id" integer, "redditable_type" varchar, "url" varchar, "reddit_owner" varchar, "user_id" integer NOT NULL, "created_at" datetime, "updated_at" datetime) 
+D, [2015-04-01T19:22:43.735504 #22564] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mDROP TABLE "builds"[0m
+D, [2015-04-01T19:22:43.735754 #22564] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE TABLE "builds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) 
+D, [2015-04-01T19:22:43.743441 #22564] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+D, [2015-04-01T19:22:43.743885 #22564] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE  INDEX "index_reddit_posts_on_user_id" ON "reddit_posts" ("user_id")
+D, [2015-04-01T19:22:43.744276 #22564] DEBUG -- :   [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reddit_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reddit_posts_on_user_id' AND type='index'
+[0m
+D, [2015-04-01T19:22:43.744564 #22564] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE  INDEX "index_reddit_posts_on_redditable_id_and_redditable_type" ON "reddit_posts" ("redditable_id", "redditable_type")
+D, [2015-04-01T19:22:43.747152 #22564] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+D, [2015-04-01T19:22:43.747503 #22564] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+D, [2015-04-01T19:22:43.747653 #22564] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+D, [2015-04-01T19:22:43.747793 #22564] DEBUG -- :   [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('1')
+D, [2015-04-01T19:25:09.098852 #24548] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mCREATE TABLE "builds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+D, [2015-04-01T19:25:09.099466 #24548] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE TABLE "reddit_posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "redditable_id" integer, "redditable_type" varchar, "url" varchar, "reddit_owner" varchar, "user_id" integer NOT NULL, "created_at" datetime, "updated_at" datetime) 
+D, [2015-04-01T19:25:09.099860 #24548] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mDROP TABLE "builds"[0m
+D, [2015-04-01T19:25:09.100043 #24548] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE TABLE "builds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) 
+D, [2015-04-01T19:25:09.106829 #24548] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+D, [2015-04-01T19:25:09.107190 #24548] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE  INDEX "index_reddit_posts_on_user_id" ON "reddit_posts" ("user_id")
+D, [2015-04-01T19:25:09.107488 #24548] DEBUG -- :   [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reddit_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reddit_posts_on_user_id' AND type='index'
+[0m
+D, [2015-04-01T19:25:09.107718 #24548] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE  INDEX "index_reddit_posts_on_redditable_id_and_redditable_type" ON "reddit_posts" ("redditable_id", "redditable_type")
+D, [2015-04-01T19:25:09.109887 #24548] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+D, [2015-04-01T19:25:09.110218 #24548] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+D, [2015-04-01T19:25:09.110365 #24548] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+D, [2015-04-01T19:25:09.110465 #24548] DEBUG -- :   [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('1')
+D, [2015-04-01T19:27:14.792318 #25509] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mCREATE TABLE "builds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+D, [2015-04-01T19:27:14.792849 #25509] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE TABLE "reddit_posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "redditable_id" integer, "redditable_type" varchar, "url" varchar, "reddit_owner" varchar, "user_id" integer NOT NULL, "created_at" datetime, "updated_at" datetime) 
+D, [2015-04-01T19:27:14.793220 #25509] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mDROP TABLE "builds"[0m
+D, [2015-04-01T19:27:14.793382 #25509] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE TABLE "builds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) 
+D, [2015-04-01T19:27:14.800647 #25509] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+D, [2015-04-01T19:27:14.801030 #25509] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE  INDEX "index_reddit_posts_on_user_id" ON "reddit_posts" ("user_id")
+D, [2015-04-01T19:27:14.801333 #25509] DEBUG -- :   [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reddit_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reddit_posts_on_user_id' AND type='index'
+[0m
+D, [2015-04-01T19:27:14.801609 #25509] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE  INDEX "index_reddit_posts_on_redditable_id_and_redditable_type" ON "reddit_posts" ("redditable_id", "redditable_type")
+D, [2015-04-01T19:27:14.803647 #25509] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+D, [2015-04-01T19:27:14.804006 #25509] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+D, [2015-04-01T19:27:14.804131 #25509] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+D, [2015-04-01T19:27:14.804254 #25509] DEBUG -- :   [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('1')
+D, [2015-04-01T19:27:50.565942 #26007] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mCREATE TABLE "builds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+D, [2015-04-01T19:27:50.566357 #26007] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE TABLE "reddit_posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "redditable_id" integer, "redditable_type" varchar, "url" varchar, "reddit_owner" varchar, "user_id" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2015-04-01T19:27:50.566636 #26007] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mDROP TABLE "builds"[0m
+D, [2015-04-01T19:27:50.566799 #26007] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE TABLE "builds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2015-04-01T19:27:50.573106 #26007] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+D, [2015-04-01T19:27:50.573434 #26007] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE  INDEX "index_reddit_posts_on_user_id" ON "reddit_posts" ("user_id")
+D, [2015-04-01T19:27:50.573732 #26007] DEBUG -- :   [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reddit_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reddit_posts_on_user_id' AND type='index'
+[0m
+D, [2015-04-01T19:27:50.573959 #26007] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE  INDEX "index_reddit_posts_on_redditable_id_and_redditable_type" ON "reddit_posts" ("redditable_id", "redditable_type")
+D, [2015-04-01T19:27:50.575908 #26007] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+D, [2015-04-01T19:27:50.576202 #26007] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+D, [2015-04-01T19:27:50.576318 #26007] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+D, [2015-04-01T19:27:50.576417 #26007] DEBUG -- :   [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('1')
