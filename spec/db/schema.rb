@@ -1,5 +1,5 @@
 ActiveRecord::Schema.define(:version => 1) do
-  create_table "redditable", :force => true do |t|
+  create_table "redditables", :force => true do |t|
     t.timestamps null: false
   end
 
@@ -8,10 +8,8 @@ ActiveRecord::Schema.define(:version => 1) do
     t.string :redditable_type
     t.string :url
     t.string :reddit_owner
-    t.integer :user_id, :null => false
     t.timestamps null: false
   end
 
-  add_index :reddit_posts, :user_id
   add_index :reddit_posts, [:redditable_id, :redditable_type]
 end

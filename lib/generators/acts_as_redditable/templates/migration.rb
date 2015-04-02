@@ -5,11 +5,9 @@ class ActsAsRedditableMigration < ActiveRecord::Migration
       t.string :redditable_type
       t.string :url
       t.string :reddit_owner
-      t.integer :user_id, :null => false
       t.timestamps
     end
 
-    add_index :reddit_posts, :user_id
     add_index :reddit_posts, [:redditable_id, :redditable_type]
   end
 

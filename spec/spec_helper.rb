@@ -13,8 +13,8 @@ load(File.join(plugin_test_dir, "db", "schema.rb"))
 require File.join(plugin_test_dir, '..', 'init')
 require File.join(plugin_test_dir, '..', 'lib', 'generators', 'acts_as_redditable', 'templates', 'reddit_post')
 
-class Redditable < ActiveRecord::Base
-	acts_as_redditable
-end
+# class Redditable < ActiveRecord::Base
+# 	acts_as_redditable
+# end
 
 ActiveRecord::Base.send(:include, Acts::Redditable)

@@ -6,7 +6,7 @@ module Acts
 
     module ClassMethods
       def acts_as_redditable
-        has_one :reddit_post
+        has_one :reddit_post, as: :redditable
       end
     end
   end
