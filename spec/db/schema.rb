@@ -1,5 +1,5 @@
 ActiveRecord::Schema.define(:version => 1) do
-  create_table "builds", :force => true do |t|
+  create_table "redditable", :force => true do |t|
     t.timestamps null: false
   end
 
@@ -9,10 +9,6 @@ ActiveRecord::Schema.define(:version => 1) do
     t.string :url
     t.string :reddit_owner
     t.integer :user_id, :null => false
-    t.timestamps null: false
-  end
-
-  create_table "builds", :force => true do |t|
     t.timestamps null: false
   end
 
